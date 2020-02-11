@@ -1,6 +1,8 @@
 # Init
 
 import os
+import itertools
+import random
 
 
 
@@ -22,3 +24,15 @@ def clear():
 		os.system('clear')
 
 
+# Uses itertool to create a deck from a list of values
+def create_deck():
+	'''
+	Creates a deck and returns it
+	'''
+
+	deck = list(itertools.product(
+		[1,2,3,4,5,6,7,8,9,10,11,12,13],
+		['Spades','Hearts','Diamonds','Clubs']))
+	random.shuffle(deck)
+
+	return deck
