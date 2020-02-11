@@ -60,9 +60,22 @@ def value_hand(hand):
 	Calculates the score of a hand and returns it
 	'''
 
+	card = 0
 	result = 0
 	for i in range(len(hand)):
-		result += hand[i][0]
+		card = hand[i][0]
+		if  card == 11 or card == 12 or card == 13:
+			result += 10
+		elif card == 1 :
+			if result >= 11: 
+				result += 1
+			else :
+				result += 11
+		else:
+			result += card
 
 	return result
+
+
+
 
