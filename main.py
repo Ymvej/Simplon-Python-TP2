@@ -36,3 +36,14 @@ def create_deck():
 	random.shuffle(deck)
 
 	return deck
+
+
+# Pops a card out of a deck given as argument
+def draw_card(deck):
+	'''
+	Draws a card from a deck and returns it
+	'''
+
+	card = deck.pop()
+	return card
+
