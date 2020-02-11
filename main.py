@@ -47,3 +47,22 @@ def draw_card(deck):
 	card = deck.pop()
 	return card
 
+
+# Core ----------------------------------------------------------------
+
+
+
+
+# Takes a list of tuples as argument and loops over the first index of 
+# each tuple, then sums each number at every loop.
+def value_hand(hand):
+	''' 
+	Calculates the score of a hand and returns it
+	'''
+
+	result = 0
+	for i in range(len(hand)):
+		result += hand[i][0]
+
+	return result
+
