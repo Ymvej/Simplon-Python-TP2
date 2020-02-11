@@ -39,13 +39,14 @@ def create_deck():
 
 
 # Pops a card out of a deck given as argument
-def draw_card(deck):
+def draw_card(deck, hand):
 	'''
-	Draws a card from a deck and returns it
+	Draws a card from a deck and returns a hand appended with it
 	'''
+	newhand = hand.copy()
+	newhand = hand.append(deck.pop())
 
-	card = deck.pop()
-	return card
+	return newhand
 
 
 # Core ----------------------------------------------------------------
@@ -75,7 +76,5 @@ def value_hand(hand):
 			result += card
 
 	return result
-
-
 
 
