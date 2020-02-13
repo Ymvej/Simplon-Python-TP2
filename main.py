@@ -43,10 +43,9 @@ def draw_card(deck, hand):
 	'''
 	Draws a card from a deck and returns a hand appended with it
 	'''
-	newhand = hand.copy()
-	newhand = hand.append(deck.pop())
+	hand.append(deck.pop())
 
-	return newhand
+	return hand
 
 
 # Core ----------------------------------------------------------------
@@ -78,3 +77,38 @@ def value_hand(hand):
 	return result
 
 
+# 
+def display(dealer_hand, player_hand):
+	'''
+
+	'''
+
+	total1 = []
+	total2 = []
+	output1 = ''
+	output2 = ''
+
+	clear()
+	for i in range(len(player_hand)):
+		total1.append(str(player_hand[i][0]) + player_hand[i][1])
+		print(total1)
+	
+
+
+
+
+	return None
+
+
+
+d = create_deck()
+h0 = []
+h1 = []
+h0 = draw_card(d, h0)
+h1 = draw_card(d, h1)
+h0 = draw_card(d, h0)
+h1 = draw_card(d, h1)
+h0 = draw_card(d, h0)
+
+
+display(h0,h1)
